@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-multipart
+jinja2
+google-cloud-storage
+pandas
+google-auth
+pandas-gbq

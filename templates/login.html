@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div style="display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size:2.2rem;color:#6366f1;margin-right:10px;"></i>
+            <h2 style="margin:0;">Sign In</h2>
+        </div>
+        {% if error %}<p class="error">{{ error }}</p>{% endif %}
+        <form method="post" action="/login">
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" placeholder="Username" required autocomplete="username">
+            </div>
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+            </div>
+            <button type="submit"><i class="fa fa-sign-in-alt"></i> Login</button>
+        </form>
+    </div>
+</body>
+</html>
